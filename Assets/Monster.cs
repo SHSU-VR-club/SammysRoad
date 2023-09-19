@@ -35,6 +35,7 @@ public class Monster : MonoBehaviour
 
     */
     public void RepositionMonster()
+        //I made this change
     {
         Debug.Log("REPOSITIONING");
         switch (phase)
