@@ -28,7 +28,7 @@ public class Monster : MonoBehaviour
     //TO-DO [For newbies]
     /*
         - Increment the phase after x seconds. [ Adjustable ]
-            > When this is done, reposition the monster to a new point in the next phase.
+            > When the phase is incremented, reposition the monster to a new point in the next phase.
         
         - Allow for each monster to have adjustable incrementTime values.
 
