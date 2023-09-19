@@ -23,6 +23,7 @@ public class Monster : MonoBehaviour
     [Header("Variables")]
     [SerializeField] int phase; // Keeps track of the phase.
     [SerializeField] MonsterType whoAmI; // Which monster is this?
+    //make changes
 
     //TO-DO [For newbies]
     /*
