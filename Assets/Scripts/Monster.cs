@@ -7,7 +7,7 @@ using UnityEngine;
 public class Monster : MonoBehaviour
 {
     // Unseen Variables
-    enum MonsterType { Tallman, Tricycle, Witchbitch };
+    enum MonsterType { monsterOne, monsterTwo, monsterThree };
     
     // Select 16 transforms where this creature can teleport between.
     // This is separated into 4 phases, divided equally. After phase 4, the player is killed.
