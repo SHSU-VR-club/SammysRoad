@@ -22,8 +22,9 @@ public class Monster : MonoBehaviour
 
     [Header("Variables")]
     [SerializeField] int phase; // Keeps track of the phase.
+    [SerializeField] float phaseTimer;//How much time in seconds before each phase change
     [SerializeField] MonsterType whoAmI; // Which monster is this?
-    //make changes
+                                         //make changes
 
     //TO-DO [For newbies]
     /*
@@ -34,6 +35,40 @@ public class Monster : MonoBehaviour
 
 
     */
+    private void Start()
+    {
+        phase = 1;
+    }
+    private void FixedUpdate()
+    {
+        //If timer is not finished, decrease timer by 
+        if (phaseTimer > 0)
+        {
+            phaseTimer -= Time.fixedDeltaTime;
+        }
+        else 
+        {
+            UpdatePhase();   //Increments phase
+            ResetTimer();
+        }
+    }
+
+    /// <summary>
+    /// Updates the current phase
+    /// </summary>
+    private void UpdatePhase()
+    {
+       
+    }
+
+    /// <summary>
+    /// Resets the phase timer based on current phase.
+    /// </summary>
+    private void ResetTimer()
+    {
+       
+    }
+
     public void RepositionMonster()
         //I deleted this change
     {

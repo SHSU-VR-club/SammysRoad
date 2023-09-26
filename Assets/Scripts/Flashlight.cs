@@ -7,12 +7,13 @@ using UnityEngine;
 public class Flashlight : MonoBehaviour
 {
     enum State { on, off };
-    State flashlightState;
+    [SerializeField] State flashlightState;
     [SerializeField] float lightDist;
     [SerializeField] GameObject raySpawn;
     [SerializeField] GameObject tallman;
     [SerializeField] GameObject tricycle;
     [SerializeField] GameObject witchbitch;
+
     void FixedUpdate()
     {
         if (flashlightState == State.on)
@@ -27,15 +28,14 @@ public class Flashlight : MonoBehaviour
                 if (hitInfo.collider.tag == "Tallman")
                 {
                     tallman.GetComponent<Monster>().RepositionMonster();
-                    Debug.Log($"Repositioning Tallman.");
+                    Debug.Log($"Repositioning Tallman.");              
                 }
             }           
         }    
     }
     private void OnDrawGizmos()
     {
-    //added change here
-        Gizmos.color = Color.yellow;
+        Gizmos.color = flashlightState == State.on ? Color.yellow : Color.red;
         Gizmos.DrawLine(raySpawn.transform.position, raySpawn.transform.position + raySpawn.transform.up * lightDist);    
     }
 }
