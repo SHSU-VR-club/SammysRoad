@@ -34,6 +34,7 @@ public class Flashlight : MonoBehaviour
     }
     private void OnDrawGizmos()
     {
+    //added change here
         Gizmos.color = Color.yellow;
         Gizmos.DrawLine(raySpawn.transform.position, raySpawn.transform.position + raySpawn.transform.up * lightDist);    
     }
